@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica;
+	background-image:url(backgroud-2.jpg);
+}
+
+header {
+  height: 140px;
+  background-image:url(background-3.jpg);
+  width: 100%;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image:url(backgroud-2.jpg);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background-image:url(backgroud-2.jpg);
+  }
+}
+
+header h1{
+  font-size: 52px;
+  font-family: 'Gochi Hand', cursive;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  
+  padding-left: 0;
+  padding: 5px;
+  list-style: none;
+}
+
+header nav ul li a {
+  font-family: Montserrat;
+  color: #fff;
+  padding: 5px;
+  margin: 5% 0;
+  text-decoration: none;
+  margin: 0 20px 0 0;
+}
+
+header nav ul li{
+  padding: 5px 10px;
+}
+
+header nav ul li{
+  font-size: 20px;
+  display: flex;
+}
+
+header nav ul li:last-child a {
+  margin-right: 0;
+}
+
+footer {
+  height: 40px;
+  background-image:url(background-3.jpg);
+  text-align: left;
+}
+
+/*name title*/
+.name {
+  font-family: cursive, Helvetica;
+  font-size: 72px;
+  color: #c04b1c;
+  text-align: center;
+}
+
+h1, h3 {
+  font-family: 'Georgia', serif;
+	color: #ee87f1;
+  text-align: center;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Georgia', serif;
+	color: #3dd317;
+  text-align: center;
+  font-weight: 400;
+}
+
+a:link { color: #08c49b; }
+a:visited { color: #2ed1dd; }
+a:hover { color: #bd6d28; }
+a:active { color: #e71c26; }
+a:hover {
+	text-decoration: underline;	
+}
+
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3 { font-size: 16px; }
+
+img{
+  width: 80%;	
+  border-radius: 8px;
+  border: 1px solid #c5c0b8;
+}
+
+/*border for separation*/
+.general-border {
+  padding-top: 40px;
+  border-top: 3px solid #ccc1b7;
+}
+
+/*centers image*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+p, li{
+ font-family: 'Montserrat', sans-serif;
+ line-height: 1.5em;
+ color: aqua;
+ line-height: 20px;   
+  margin-bottom: 10px; 
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+ol {
+  display: table;
+  margin: 0 auto;
+  line-height: 20px; 
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+form label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: aqua;
+  font-family: arial;
+  margin-left: 200px;
+}
+
+form input[type=text] {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+}
+
+textarea {
+  width: 300px;
+  height: 150px;
+  margin-left: 200px;
+}
+
+form button{
+  margin-left: 200px;
+}
+
+
