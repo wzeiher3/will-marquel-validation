@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Shopping List</title>
+  <link rel="shortcut icon" href="#">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  
+  <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<body>
+  <div class="container">
+    <h1>Bookmarks</h1>
+    <form id="js-bookmark-form">
+      <div class="error-container">Some text</div>
+      <label for="bookmark-entry">Add a bookmark:</label>
+      <input type="text" name="bookmark-entry" class="js-bookmark-entry"
+        required>
+      <button type="submit">Add </button>
+    </form>
+    <form>
+        <input type="radio" name="choice" value="1star"> 1 Star
+        <input type="radio" name="choice" value="2stars"> 2 Stars
+        <input type="radio" name="choice" value="3stars"> 3 Stars
+        <input type="radio" name="choice" value="4stars"> 4 Stars
+        <input type="radio" name="choice" value="5stars"> 5 Stars
+        <!-- <input type="button" id="btn" value="Show Selected Value"> -->
+    </form>
+    <script>
+        // const btn = document.querySelector('#btn');
+        // // handle click button
+        // btn.onclick = function () {
+        //     const rbs = document.querySelectorAll('input[name="choice"]');
+        //     let selectedValue;
+        //     for (const rb of rbs) {
+        //         if (rb.checked) {
+        //             selectedValue = rb.value;
+        //             break;
+        //         }
+        //     }
+        //     alert(selectedValue);
+        // };
+    </script>
+    <ul class="bookmarks js-bookmarks">
+
+    </ul>
+  </div>
+
+</body>
+
+</html>
