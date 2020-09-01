@@ -7,7 +7,7 @@ export default class MainSidebar extends React.Component{
         return (
             <div className="Main-Sidebar">
                 {this.props.folders.map(folder => 
-                    <Link to={`/folder/${folder.id}`} key={folder.id}>{folder.name}</Link>
+                    <Link to={`/folders/${folder.id}`} key={folder.id}>{folder.name}</Link>
                 )}
             </div>
         )
