@@ -9,6 +9,7 @@ import ApiContext from '../ApiContext';
 import config from '../config';
 import './App.css';
 import AddFolder from '../AddFolder'
+import ErrorPage from './ErrorPage';
 
 
 class App extends Component {
@@ -45,22 +46,11 @@ class App extends Component {
         });
     };
 
-    addFolder = newName => {
-        const newFolder = {
-            id: newName,
-            name: newName
-        }
-        
-        fetch(`http://localhost:9090/folders`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(newFolder)})
-        .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-            
-}
+    addFolder = newFolder => {
+        this.setState({
+            folders: [...this.state.folders, newFolder]
+        })
+    }
 
     renderNavRoutes() {
         return (
@@ -105,6 +95,7 @@ class App extends Component {
         };
         return (
             <ApiContext.Provider value={value}>
+                <ErrorPage>
                 <div className="App">
                     <nav className="App__nav">{this.renderNavRoutes()}</nav>
                     <header className="App__header">
@@ -115,6 +106,7 @@ class App extends Component {
                     </header>
                     <main className="App__main">{this.renderMainRoutes()}</main>
                 </div>
+                </ErrorPage>
             </ApiContext.Provider>
         );
     }

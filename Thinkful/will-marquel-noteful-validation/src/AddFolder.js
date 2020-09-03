@@ -11,15 +11,29 @@ class AddFolder extends Component {
   handleSubmit(event) {
     event.preventDefault();
     console.log(event.target);
-    const name = event.target.newName.value;
+    const newName = event.target.newName.value;
     
-    this.context.addFolder(name);
-    this.goBack()
+    const newFolder = {
+        name: newName
+    }
+    
+    fetch(`http://localhost:9090/folders`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(newFolder)})
+    .then(response => response.json())
+    .then(data => {
+            console.log('Success:', data);
+            this.context.addFolder(data);
+            this.goBack();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
   }
 
 
   goBack(){
-      this.props.history.push('/')
+        console.log('goBack')
+        this.props.history.push('/')
   }
   render() {
    
